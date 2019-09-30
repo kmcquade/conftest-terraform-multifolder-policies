@@ -1,0 +1,20 @@
+### Mac OS X ###
+.DS_Store
+
+### IDEs ###
+.vscode
+.idea
+
+### Terraform 
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+
+### Terraform plan files for OPA inspection
+plan.tfplan
+# Leaving this so others can inspect the JSON
+# plan.json
+
+### Working/notes directories
+tmp/*
+_notes/*

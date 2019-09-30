@@ -1,0 +1,202 @@
+{
+  "format_version": "0.1",
+  "terraform_version": "0.12.2",
+  "planned_values": {
+    "root_module": {
+      "resources": [
+        {
+          "address": "aws_s3_bucket.profile_picture_storage",
+          "mode": "managed",
+          "type": "aws_s3_bucket",
+          "name": "profile_picture_storage",
+          "provider_name": "aws",
+          "schema_version": 0,
+          "values": {
+            "acl": "private",
+            "bucket_prefix": "profile-picture-storage",
+            "cors_rule": [],
+            "force_destroy": false,
+            "lifecycle_rule": [],
+            "logging": [],
+            "object_lock_configuration": [],
+            "policy": null,
+            "replication_configuration": [],
+            "server_side_encryption_configuration": [
+              {
+                "rule": [
+                  {
+                    "apply_server_side_encryption_by_default": [
+                      {
+                        "kms_master_key_id": null,
+                        "sse_algorithm": "AES256"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "tags": {
+              "ApplicationRole": "FileStorage",
+              "Owner": "UserEngagement",
+              "Project": "ProfileUploadService"
+            },
+            "versioning": [
+              {
+                "enabled": true,
+                "mfa_delete": false
+              }
+            ],
+            "website": []
+          }
+        }
+      ]
+    }
+  },
+  "resource_changes": [
+    {
+      "address": "aws_s3_bucket.profile_picture_storage",
+      "mode": "managed",
+      "type": "aws_s3_bucket",
+      "name": "profile_picture_storage",
+      "provider_name": "aws",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "acl": "private",
+          "bucket_prefix": "profile-picture-storage",
+          "cors_rule": [],
+          "force_destroy": false,
+          "lifecycle_rule": [],
+          "logging": [],
+          "object_lock_configuration": [],
+          "policy": null,
+          "replication_configuration": [],
+          "server_side_encryption_configuration": [
+            {
+              "rule": [
+                {
+                  "apply_server_side_encryption_by_default": [
+                    {
+                      "kms_master_key_id": null,
+                      "sse_algorithm": "AES256"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "tags": {
+            "ApplicationRole": "FileStorage",
+            "Owner": "UserEngagement",
+            "Project": "ProfileUploadService"
+          },
+          "versioning": [
+            {
+              "enabled": true,
+              "mfa_delete": false
+            }
+          ],
+          "website": []
+        },
+        "after_unknown": {
+          "acceleration_status": true,
+          "arn": true,
+          "bucket": true,
+          "bucket_domain_name": true,
+          "bucket_regional_domain_name": true,
+          "cors_rule": [],
+          "hosted_zone_id": true,
+          "id": true,
+          "lifecycle_rule": [],
+          "logging": [],
+          "object_lock_configuration": [],
+          "region": true,
+          "replication_configuration": [],
+          "request_payer": true,
+          "server_side_encryption_configuration": [
+            {
+              "rule": [
+                {
+                  "apply_server_side_encryption_by_default": [
+                    {}
+                  ]
+                }
+              ]
+            }
+          ],
+          "tags": {},
+          "versioning": [
+            {}
+          ],
+          "website": [],
+          "website_domain": true,
+          "website_endpoint": true
+        }
+      }
+    }
+  ],
+  "configuration": {
+    "provider_config": {
+      "aws": {
+        "name": "aws",
+        "expressions": {
+          "region": {
+            "constant_value": "us-east-1"
+          }
+        }
+      }
+    },
+    "root_module": {
+      "resources": [
+        {
+          "address": "aws_s3_bucket.profile_picture_storage",
+          "mode": "managed",
+          "type": "aws_s3_bucket",
+          "name": "profile_picture_storage",
+          "provider_config_key": "aws",
+          "expressions": {
+            "acl": {
+              "constant_value": "private"
+            },
+            "bucket_prefix": {
+              "constant_value": "profile-picture-storage"
+            },
+            "server_side_encryption_configuration": [
+              {
+                "rule": [
+                  {
+                    "apply_server_side_encryption_by_default": [
+                      {
+                        "sse_algorithm": {
+                          "constant_value": "AES256"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "tags": {
+              "constant_value": {
+                "ApplicationRole": "FileStorage",
+                "Owner": "UserEngagement",
+                "Project": "ProfileUploadService"
+              }
+            },
+            "versioning": [
+              {
+                "enabled": {
+                  "constant_value": true
+                }
+              }
+            ]
+          },
+          "schema_version": 0
+        }
+      ]
+    }
+  }
+}
