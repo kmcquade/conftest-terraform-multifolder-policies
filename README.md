@@ -2,7 +2,7 @@
 
 Example of how to use conftest in a modular fashion with Terraform 0.12 plans.
 
-## Prequisites
+## Prerequisites
 
 * Terraform 0.12 installed
 * Authenticated to AWS CLI (for the Terraform plan)
