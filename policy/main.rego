@@ -14,5 +14,5 @@ deny[msg] {
 }
 
 allow {
-	count(deny) > 0
+	count(deny) == 0
 }
